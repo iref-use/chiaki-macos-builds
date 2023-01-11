@@ -9,14 +9,9 @@ xcode-select --install
 You can try to compile it. You might need to install some libraries or remove.
 ```
 git clone --recurse-submodules https://git.sr.ht/~thestr4ng3r/chiaki
-git clone -b release-2.0.14 https://github.com/libsdl-org/SDL.git
 
-brew install cmake make protobuf openssl qt@5 pkg-config ffmpeg
+brew install sdl2 cmake make protobuf openssl qt@5 pkg-config ffmpeg
 
-cd SDL && mkdir build && cd build && cmake .. && make
-# Might need sudo.
-make install
-cd ../..
 cd chiaki && mkdir build && cd build
 export CMAKE_PREFIX_PATH=$(brew --prefix qt@5)
 cmake .. -DOPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl -DOPENSSL_LIBRARIES=/opt/homebrew/opt/openssl/lib -DCHIAKI_GUI_ENABLE_SDL_GAMECONTROLLER=ON
