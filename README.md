@@ -1,4 +1,4 @@
-# Chiaki builds for Mac OS with SDL support.
+# How to build Chiaki for Mac OS with SDL support.
 
 You may need to install brew and xcode dev tools.
 ```
